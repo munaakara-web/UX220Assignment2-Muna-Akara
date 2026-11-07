@@ -1,112 +1,174 @@
-root {
-  --primary: #1f3a5f;      /* navy: nav and footer background */
-  --accent: #f2a541;       /* amber: buttons and hover highlights */
-  --light: #f7f5f0;        /* warm off-white: page background, text on dark */
-  --text: #222222;         /* near-black: body text */
-  --item-spacing: 2.5rem;  /* whitespace between items */
-  --pane-padding: 1rem 2rem;
-}
- 
-* {
-  box-sizing: border-box;
-}
- 
-body {
-  margin: 0;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background-color: var(--light);
-  color: var(--text);
-}
- 
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  color: var(--primary);
-  line-height: 1.2;
-}
- 
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--pane-padding);
-}
- 
-/* Navbar */
-nav {
-  background-color: var(--primary);
-  color: var(--light);
-  padding: var(--pane-padding);
-}
- 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
- 
-nav a {
-  color: var(--light);
-  text-decoration: none;
-  font-weight: 600;
-}
- 
-nav a:hover,
-nav a:focus {
-  color: var(--accent);
-  text-decoration: underline;
-}
- 
-/* Footer */
-footer {
-  background-color: var(--primary);
-  color: var(--light);
-  padding: var(--pane-padding);
-  text-align: center;
-  margin-top: var(--item-spacing);
-}
- 
-footer a {
-  color: var(--accent);
-}
- 
-/* Whitespace between items */
-article,
-section,
-.item {
-  margin-bottom: var(--item-spacing);
-  padding-bottom: var(--item-spacing);
-  border-bottom: 1px solid rgba(31, 58, 95, 0.2);
-}
- 
-article:last-child,
-section:last-child,
-.item:last-child {
-  border-bottom: none;
-}
- 
-/* Buttons */
-button,
-.button {
-  background-color: var(--accent);
-  color: var(--primary);
-  border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.2rem;
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
- 
-button:hover,
-.button:hover {
-  background-color: var(--primary);
-  color: var(--light);
-}
- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UX220 Assignment 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary: #1f3a5f;      /* navy: nav and footer background */
+        --accent: #f2a541;       /* amber: buttons and hover highlights */
+        --light: #f7f5f0;        /* warm off-white: page background, text on dark */
+        --text: #222222;         /* near-black: body text */
+        --item-spacing: 2.5rem;  /* whitespace between items */
+        --pane-padding: 1rem 2rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        background-color: var(--light);
+        color: var(--text);
+      }
+
+      h1, h2, h3, h4 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary);
+        line-height: 1.2;
+        margin-top: 0;
+      }
+
+      a {
+        color: var(--primary);
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--pane-padding);
+      }
+
+      nav {
+        background-color: var(--primary);
+        color: var(--light);
+        padding: var(--pane-padding);
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      nav a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      article,
+      section,
+      .item {
+        margin-bottom: var(--item-spacing);
+        padding-bottom: var(--item-spacing);
+        border-bottom: 1px solid rgba(31, 58, 95, 0.2);
+      }
+
+      article:last-child,
+      section:last-child,
+      .item:last-child {
+        border-bottom: none;
+      }
+
+      .button,
+      button {
+        background-color: var(--accent);
+        color: var(--primary);
+        border: none;
+        border-radius: 6px;
+        padding: 0.6rem 1.2rem;
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .button:hover,
+      button:hover,
+      .button:focus,
+      button:focus {
+        background-color: var(--primary);
+        color: var(--light);
+      }
+
+      footer {
+        background-color: var(--primary);
+        color: var(--light);
+        padding: var(--pane-padding);
+        text-align: center;
+        margin-top: var(--item-spacing);
+      }
+
+      footer a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="home" class="item">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+          I create thoughtful digital experiences that blend clean design with practical user needs.
+        </p>
+        <a class="button" href="#projects">View My Work</a>
+      </section>
+
+      <article id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a designer and developer interested in accessible, modern, and user-focused interfaces.
+          My goal is to build experiences that are both attractive and easy to use.
+        </p>
+      </article>
+
+      <section id="projects" class="item">
+        <h2>Featured Work</h2>
+        <p>
+          This section can showcase case studies, project highlights, and design decisions.
+        </p>
+        <button type="button">Learn More</button>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: hello@example.com</p>
+        <a href="mailto:hello@example.com" class="button">Get in Touch</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 UX220 Assignment 2</p>
+      <p><a href="#home">Back to top</a></p>
+    </footer>
+  </body>
+</html>
